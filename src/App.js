@@ -33,7 +33,7 @@ const App = () => {
 
       <Switch>
         <Route path="/queryPage">
-          <queryPage />
+          <h2>blah blah blah</h2>
         </Route>
         <Route path="/">
           <Home />
@@ -113,10 +113,6 @@ function Home() {
         </div>
       </div>
   );
-}
-
-function queryPage() {
-  return <h2>queryPage</h2>;
 }
 
 
