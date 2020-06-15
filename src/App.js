@@ -2,8 +2,7 @@ import React, {useEffect, useState} from 'react';
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 import AnalysisSection from "./screen/AnalysisSection"
 import { ListGroup, Form, Card, Button } from 'react-bootstrap';
@@ -14,6 +13,8 @@ import DatePicker from "react-datepicker";
 import Select from 'react-select'
 import "react-datepicker/dist/react-datepicker.css";
 import moment from "moment"
+import Navbar from './components/Navbar';
+
 let endPoint = "http://localhost:5000";
 
 let socket = io.connect(`${endPoint}`);
@@ -28,13 +29,7 @@ const setUrl = (name) => {
 const App = () => {
   return (
     <Router>
-      <li>
-        <Link to="/">Home</Link>
-      </li>
-      <li>
-        <Link to="/queryPage">Query</Link>
-      </li>
-
+     <Navbar />
       <Switch>
         <Route path="/queryPage">
           <QueryPage />
